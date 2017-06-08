@@ -1,0 +1,11 @@
+<header class="small">
+  <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  <nav class="contact">
+    {{ range .Site.Params.social }}
+    <a class="icon {{ .fa_icon }}" href="{{ .url }}" target="_blank">
+    </a>
+    {{ end }}
+  </nav>
+</header>
+
+

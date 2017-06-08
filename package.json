@@ -1,9 +1,8 @@
 {
-  "name": "hemingway",
+  "name": "santiago",
   "devDependencies": {
-    "bulma": "^0.1.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-sass": "^2.3.2"
-  }
+    "gulp-less": "^3.3.0"
+  },
 }
