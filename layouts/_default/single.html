@@ -2,16 +2,16 @@
 {{ partial "header" . }}
 {{ partial "small-top" . }}
 <main class="single">
-  <article>
-    <h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>
-    <h1 class="title">{{ .Title }}</h1>
-    {{ if .Params.tags }}
-      {{ partial "tags" .Params.tags }}
-    {{ end }}
-    <section class="article-body">
-      {{ .Content }}
-    </section>
-  </article>
+	<article>
+		<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>
+		<h1 class="title">{{ .Title }}</h1>
+		{{ if .Params.tags }}
+			{{ partial "tags" .Params.tags }}
+		{{ end }}
+		<section class="article-body">
+			{{ .Content }}
+		</section>
+	</article>
 </main>
 {{ partial "disqus" . }}
 {{ partial "footer" . }}

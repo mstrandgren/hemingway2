@@ -1,20 +1,22 @@
 {{ partial "header" . }}
 {{ partial "big-top" . }}
 <main class="list">
-  {{ range sort .Paginator.Pages }}
-  <article>
-    <h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>
-    <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+	{{ range sort .Paginator.Pages }}
+	{{ if .Params.listed }}
+	<article>
+		<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>
+		<h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
 
-    {{ if .Params.tags }}
-      {{ partial "tags" .Params.tags }}
-    {{ end }}
-    <section class="article-body">
-      {{ .Content }}
-    </section>
-  </article>
-  <hr>
-  {{ end }}
+		{{ if .Params.tags }}
+			{{ partial "tags" .Params.tags }}
+		{{ end }}
+		<section class="article-body">
+			{{ .Content }}
+		</section>
+	</article>
+	<hr>
+	{{ end }}
+	{{ end }}
 </main>
 {{ partial "pager" . }}
 {{ partial "footer" . }}
